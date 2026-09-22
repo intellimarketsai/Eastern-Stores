@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eastern Stores | South India’s First Winter Wear Store Since 1950</title>
+    <meta name="description" content="Eastern Stores, established in 1950, is a trusted destination in Bengaluru for winter wear, men’s ethnic wear and premium luggage. Explore our collection and visit our Commercial Street store.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* -----------------------------------------------------------------
+           2026 DESIGN SYSTEM & VARIABLES
+           Palette: Soft Icy Blues, Pure Whites, Deep Navy, Subtle Silver
+        ----------------------------------------------------------------- */
+        :root {
+            --bg-primary: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-icy: #edf5fa;
+            --bg-icy-gradient: linear-gradient(135deg, #eef7fc 0%, #f8fafc 50%, #e2f1f8 100%);
+            --bg-navy: #0b1a30;
+            --bg-navy-gradient: linear-gradient(135deg, #0b1a30 0%, #132a4a 100%);
+            
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --text-light: #94a3b8;
+            --text-white: #ffffff;
+            
+            --accent-blue: #0284c7;
+            --accent-icy-glow: rgba(186, 230, 253, 0.5);
+            --border-subtle: #e2e8f0;
+            --border-glass: rgba(255, 255, 255, 0.2);
+            
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            
+            --shadow-sm: 0 2px 8px rgba(11, 26, 48, 0.04);
+            --shadow-md: 0 12px 24px -6px rgba(11, 26, 48, 0.08);
+            --shadow-lg: 0 20px 32px -8px rgba(11, 26, 48, 0.12);
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-full: 9999px;
+            
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* -----------------------------------------------------------------
+           RESET & GLOBAL STYLES
+        ----------------------------------------------------------------- */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 4rem 0;
+            }
+        }
+
+        /* Typography Helpers */
+        .serif {
+            font-family: var(--font-serif);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3.5rem auto;
+        }
+
+        .section-header .tag {
+            display: inline-block;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-blue);
+            background: var(--bg-icy);
+            padding: 0.35rem 1rem;
+            border-radius: var(--radius-full);
+            margin-bottom: 0.75rem;
+            border: 1px solid rgba(2, 132, 199, 0.15);
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-header h2 { font-size: 1.875rem; }
+            .section-header p { font-size: 1rem; }
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            border-radius: var(--radius-full);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--bg-navy);
+            color: var(--text-white);
+            box-shadow: 0 4px 14px rgba(11, 26, 48, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #132a4a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(11, 26, 48, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-surface);
+            color: var(--bg-navy);
+            border-color: var(--border-subtle);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-icy);
+            border-color: #cbd5e1;
+            transform: translateY(-2px);
+        }
+
+        /* -----------------------------------------------------------------
+           HEADER & NAVIGATION
+        ----------------------------------------------------------------- */
+        .top-banner {
+            background-color: var(--bg-navy);
+            color: var(--text-white);
+            font-size: 0.8125rem;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: var(--transition);
+        }
+
+        .navbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 76px;
+        }
+
+        .brand-logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-logo .logo-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            color: var(--bg-navy);
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .brand-logo .logo-sub {
+            font-size: 0.625rem;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-top: 3px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .nav-contact {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: var(--bg-navy);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-icy);
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(2, 132, 199, 0.1);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--bg-navy);
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                position: fixed;
+                top: 76px;
+                left: 0;
+                width: 100%;
+                background: var(--bg-surface);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--border-subtle);
+                box-shadow: var(--shadow-md);
+                transform: translateY(-150%);
+                transition: transform 0.4s ease;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-contact-desktop {
+                display: none;
+            }
+        }
+
+        /* -----------------------------------------------------------------
+           HERO SECTION
+        ----------------------------------------------------------------- */
+        .hero {
+            background: var(--bg-icy-gradient);
+            padding: 5rem 0 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--accent-icy-glow) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(11, 26, 48, 0.1);
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            color: var(--bg-navy);
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero-title {
+            font-size: 3.25rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--bg-navy);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 540px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card-image {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-glass);
+        }
+
+        .hero-glass-overlay {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 1.25rem 1.75rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--bg-surface);
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-glass-overlay .number {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--bg-navy);
+        }
+
+        .hero-glass-overlay .label {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-title { font-size: 2.25rem; }
+            .hero-subtitle { margin: 0 auto 2rem auto; }
+            .hero-cta { justify-content: center; }
+            .hero-glass-overlay { display: none; }
+            .hero-card-image { height: 350px; }
+        }
+
+        /* -----------------------------------------------------------------
+           STATS SECTION
+        ----------------------------------------------------------------- */
+        .stats-section {
+            background: var(--bg-navy-gradient);
+            color: var(--text-white);
+            padding: 3.5rem 0;
+            position: relative;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-white);
+            letter-spacing: -0.02em;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(180deg, #ffffff 0%, #bae6fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-item .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* -----------------------------------------------------------------
+           COLLECTIONS SECTION
+        ----------------------------------------------------------------- */
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .collection-card {
+            background: var(--bg-surface);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: #cbd5e1;
+        }
+
+        .collection-img-wrapper {
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background: var(--bg-icy);
+        }
+
+        .collection-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .collection-card:hover .collection-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .collection-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .collection-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--bg-navy);
+            margin-bottom: 0.35rem;
+        }
+
+        .collection-content p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* -----------------------------------------------------------------
+           HERITAGE / ABOUT SECTION
+        ----------------------------------------------------------------- */
+        .about-section {
+            background: var(--bg-navy-gradient);
+            color: var(--text-white);
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .about-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .about-card h3 {
+            font-size: 1.25rem;
+            color: #bae6fd;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .about-card p {
+            color: #e2e8f0;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        /* -----------------------------------------------------------------
+           WHY CHOOSE US
+        ----------------------------------------------------------------- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--bg-surface);
+            padding: 1.75rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: rgba(2, 132, 199, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--bg-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* -----------------------------------------------------------------
+           OUR ADVANTAGE (NUMBERED CARDS)
+        ----------------------------------------------------------------- */
+        .advantage-section {
+            background: var(--bg-icy-gradient);
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .advantage-card {
+            background: var(--bg-surface);
+            padding: 2.25rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .advantage-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            background: var(--bg-icy);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .advantage-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--bg-navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .advantage-card p {
+            font-size: 0.9375rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* -----------------------------------------------------------------
+           BRANDS SECTION
+        ----------------------------------------------------------------- */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .brand-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            padding: 2rem 1.5rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--bg-navy);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+        }
+
+        .brand-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: var(--shadow-md);
+            background: var(--bg-icy);
+        }
+
+        /* -----------------------------------------------------------------
+           CUSTOMER REVIEWS
+        ----------------------------------------------------------------- */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .review-card {
+            background: var(--bg-surface);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-quote {
+            font-size: 0.9375rem;
+            color: var(--text-main);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .review-author h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--bg-navy);
+        }
+
+        .review-author span {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+        }
+
+        .stars {
+            color: #f59e0b;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+        }
+
+        /* -----------------------------------------------------------------
+           LOCATIONS & HOURS
+        ----------------------------------------------------------------- */
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .location-card {
+            background: var(--bg-surface);
+            padding: 2.25rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .location-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--bg-navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .location-card .sub-tag {
+            font-size: 0.8125rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .location-card address {
+            font-style: normal;
+            color: var(--text-muted);
+            font-size: 0.9375rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .hours-card {
+            background: var(--bg-navy-gradient);
+            color: var(--text-white);
+            padding: 2.25rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+
+        .hours-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1.5rem;
+            color: #bae6fd;
+        }
+
+        .hours-flex {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hours-item h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .hours-item p {
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+
+        /* -----------------------------------------------------------------
+           CTA & FOOTER
+        ----------------------------------------------------------------- */
+        .cta-section {
+            background: var(--bg-icy-gradient);
+            text-align: center;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            color: var(--bg-navy);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .cta-content p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background: var(--bg-navy);
+            color: var(--text-light);
+            padding: 4rem 0 2rem 0;
+            font-size: 0.9375rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            color: var(--text-white);
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            max-width: 360px;
+            line-height: 1.6;
+        }
+
+        .footer-col h4 {
+            color: var(--text-white);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #94a3b8;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--text-white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.8125rem;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-banner">
+        South India’s First Winter Wear Store Since 1950 | Visit Our Store for the Best Collection
+    </div>
+
+    <!-- Sticky Navigation -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="#" class="brand-logo">
+                <span class="logo-title">Eastern Stores</span>
+                <span class="logo-sub">Since 1950 • Bengaluru</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#collections">We Offer</a>
+                <a href="#about">About</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="tel:+919742419666" class="nav-contact nav-contact-desktop">
+                📞 +91 97424 19666
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>✨</span> 75+ Years of Excellence
+                </div>
+                <h1 class="hero-title serif">South India’s First Winter Wear Store Since 1950</h1>
+                <p class="hero-subtitle">
+                    Bangalore’s oldest and most trusted destination for winter clothing, men’s ethnic wear, and premium luggage since 1950.
+                </p>
+                <div class="hero-cta">
+                    <a href="#locations" class="btn btn-primary">Visit Our Store</a>
+                    <a href="#collections" class="btn btn-secondary">Explore Collections</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80" alt="Premium winter jacket display" class="hero-card-image">
+                <div class="hero-glass-overlay">
+                    <div class="number">1950</div>
+                    <div class="label">Established Institution</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">75+</div>
+                    <div class="stat-label">Years Legacy</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">#1</div>
+                    <div class="stat-label">In South India</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Locations in Bangalore</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1950</div>
+                    <div class="stat-label">Established</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1st</div>
+                    <div class="stat-label">In South India</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Products</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="section-padding" id="collections">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Our Collections</span>
+                <h2 class="serif">Explore Our Products</h2>
+                <p>Premium quality winter wear, ethnic wear, and luggage</p>
+            </div>
+
+            <div class="collections-grid">
+                <!-- 1. Thermal Wear -->
+                <div class="collection-card">
+                    <div class="collection-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1516762689617-e1cffffd478d?auto=format&fit=crop&w=600&q=80" alt="Thermal Wear">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Thermal Wear</h3>
+                        <p>Complete thermal collection</p>
+                    </div>
+                </div>
+
+                <!-- 2. Winter Jackets -->
+                <div class="collection-card">
+                    <div class="collection-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80" alt="Winter Jackets">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Winter Jackets</h3>
+                        <p>Thermal & stylish jackets</p>
+                    </div>
+                </div>
+
+                <!-- 3. Sweaters -->
+                <div class="collection-card">
+                    <div class="collection-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80" alt="Sweaters">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Sweaters</h3>
+                        <p>Monte Carlo & more</p>
+                    </div>
+                </div>
+
+                <!-- 4. Woollen Wear -->
+                <div class="collection-card">
+                    <div class="collection-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?auto=format&fit=crop&w=600&q=80" alt="Woollen Wear">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Woollen Wear</h3>
+                        <p>Premium wool collection</p>
+                    </div>
+                </div>
+
+                <!-- 5. Overcoats -->
+                <div class="collection-card">
+                    <div class="collection-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=600&q=80" alt="Overcoats">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Overcoats</h3>
+                        <p>Elegant formal wear</p>
+                    </div>
+                </div>
+
+                <!-- 6. Trench Coats -->
+                <div class="collection-card">
+                    <div class="collection-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=600&q=80" alt="Trench Coats">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Trench Coats</h3>
+                        <p>Classic sophistication</p>
+                    </div>
+                </div>
+
+                <!-- 7. Mufflers -->
+                <div class="collection-card">
+                    <div class="collection-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=600&q=80" alt="Mufflers">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Mufflers</h3>
+                        <p>Warm accessories</p>
+                    </div>
+                </div>
+
+                <!-- 8. Luggage & Suitcases -->
+                <div class="collection-card">
+                    <div class="collection-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1565026057447-b88e3f29042b?auto=format&fit=crop&w=600&q=80" alt="Luggage and Suitcases">
+                    </div>
+                    <div class="collection-content">
+                        <h3>Luggage & Suitcases</h3>
+                        <p>American Tourister & more</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Heritage Section -->
+    <section class="section-padding about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag" style="background: rgba(255,255,255,0.1); color: #bae6fd;">Heritage</span>
+                <h2 class="serif" style="color: var(--text-white);">75 Years of Excellence</h2>
+                <p style="color: #94a3b8;">A journey of trust, quality, and tradition</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>First in South India</h3>
+                    <p>Pioneering the winter wear industry in South India since 1950</p>
+                </div>
+                <div class="about-card">
+                    <h3>Oldest in Bangalore</h3>
+                    <p>One of Bangalore’s most trusted and oldest retail establishments</p>
+                </div>
+                <div class="about-card">
+                    <h3>Best Variety</h3>
+                    <p>Extensive collection of men’s ethnic wear, winter wear, and luggage</p>
+                </div>
+                <div class="about-card">
+                    <h3>Winter Specialists</h3>
+                    <p>Complete range from thermal wear to luxury overcoats</p>
+                </div>
+                <div class="about-card">
+                    <h3>Premium Brands</h3>
+                    <p>Monte Carlo sweaters, American Tourister luggage & more</p>
+                </div>
+                <div class="about-card">
+                    <h3>Two Locations</h3>
+                    <p>Main store & Eastern Edition in Jayanagar 9th Block</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Why Choose Eastern Stores</span>
+                <h2 class="serif">Seven Decades of Trust</h2>
+                <p>Seven decades of trust, quality, and unmatched service</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>75 Years Experience</h3>
+                    <p>Three generations of expertise in winter wear and ethnic fashion</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Authentic Products</h3>
+                    <p>100% genuine products from authorized brands and manufacturers</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Expert Staff</h3>
+                    <p>Knowledgeable team to help you find perfect fit and style</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Vast Collection</h3>
+                    <p>Largest selection of winter wear and ethnic fashion in South India</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Best Value</h3>
+                    <p>Competitive prices with no compromise on quality</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Easy Exchange</h3>
+                    <p>Hassle-free exchange policy for your convenience</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Personal Service</h3>
+                    <p>One-on-one attention to every customer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Advantage -->
+    <section class="section-padding advantage-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Our Advantage</span>
+                <h2 class="serif">Why We Are The Best</h2>
+            </div>
+
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <div class="advantage-number">1</div>
+                    <h3>Historic Legacy</h3>
+                    <p>As the first winter wear store in South India since 1950, we’ve set the standard for quality and service that others follow. Our 75-year journey speaks volumes about our commitment.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-number">2</div>
+                    <h3>Unmatched Variety</h3>
+                    <p>From thermal wear to luxury overcoats, from Monte Carlo sweaters to American Tourister luggage – we offer the most comprehensive collection under one roof.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-number">3</div>
+                    <h3>Quality Assurance</h3>
+                    <p>Every product in our store is handpicked for quality. We partner only with the most trusted brands and manufacturers to ensure you get the best.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-number">4</div>
+                    <h3>Expert Knowledge</h3>
+                    <p>Our team brings decades of collective experience. We understand fabrics, fits, and fashion – ensuring you get expert guidance with every purchase.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-number">5</div>
+                    <h3>Customer First</h3>
+                    <p>Generations of families have trusted us. Our relationship with customers extends beyond transactions – we’re part of Bangalore’s social fabric.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-number">6</div>
+                    <h3>Convenient Locations</h3>
+                    <p>Two strategic locations in Bangalore – our heritage main store and Eastern Edition in Jayanagar 9th Block – making quality accessible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Brands We Carry</span>
+                <h2 class="serif">Authorized Quality Brands</h2>
+                <p>Quality products from trusted manufacturers</p>
+            </div>
+
+            <div class="brands-grid">
+                <div class="brand-card">Monte Carlo</div>
+                <div class="brand-card">American Tourister</div>
+                <div class="brand-card">Premium Woollens</div>
+                <div class="brand-card">Thermal Brands</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="section-padding" id="reviews" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Customer Reviews</span>
+                <h2 class="serif">What Our Customers Say</h2>
+                <p>Trusted by generations of families in Bangalore</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-quote">“My family has been shopping at Eastern Stores for three generations. The quality and service have remained exceptional throughout. A true Bangalore institution!”</p>
+                    </div>
+                    <div class="review-author">
+                        <h4>Rajesh Kumar</h4>
+                        <span>Long-time Customer</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-quote">“The best collection of winter wear in Bangalore! The staff is incredibly knowledgeable and helped me find perfect thermal wear for my trip. Highly recommended!”</p>
+                    </div>
+                    <div class="review-author">
+                        <h4>Priya Sharma</h4>
+                        <span>Satisfied Customer</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-quote">“Authentic products at great prices. I bought my American Tourister luggage here and several Monte Carlo sweaters. Quality is outstanding and the service is personal.”</p>
+                    </div>
+                    <div class="review-author">
+                        <h4>Arun Menon</h4>
+                        <span>Regular Customer</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-quote">“A Bangalore landmark! The heritage and trust that comes with 75 years of service is evident. Found exactly what I needed for my Kashmir trip.”</p>
+                    </div>
+                    <div class="review-author">
+                        <h4>Deepa Reddy</h4>
+                        <span>New Customer</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-quote">“The variety and quality are unmatched. From woollen wear to luggage, everything under one roof. The personal attention from staff makes all the difference!”</p>
+                    </div>
+                    <div class="review-author">
+                        <h4>Vikram Iyer</h4>
+                        <span>Loyal Customer</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-quote">“Being the oldest winter wear store in Bangalore shows! The expertise and product knowledge of the team is impressive. Always my first choice for winter shopping.”</p>
+                    </div>
+                    <div class="review-author">
+                        <h4>Meera Krishnan</h4>
+                        <span>Valued Customer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Store Hours -->
+    <section class="section-padding" id="locations" style="background: var(--bg-icy-gradient);">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Visit Us</span>
+                <h2 class="serif">Our Locations</h2>
+                <p>Two convenient locations in Bangalore</p>
+            </div>
+
+            <div class="locations-grid">
+                <div class="location-card">
+                    <h3>Eastern Stores</h3>
+                    <span class="sub-tag">Main Store</span>
+                    <address>
+                        102, 103, Commercial Street, Bengaluru<br>
+                        Karnataka – 560001, India
+                    </address>
+                    <p><strong>Phone:</strong> <a href="tel:+919742419666" style="color: var(--accent-blue);">+91 97424 19666</a></p>
+                </div>
+
+                <div class="location-card">
+                    <h3>Eastern Stores</h3>
+                    <span class="sub-tag">Head Office</span>
+                    <address>
+                        102, 103, Commercial Street<br>
+                        Bangalore, KA – 560001
+                    </address>
+                    <p><strong>Phone:</strong> <a href="tel:+919742419666" style="color: var(--accent-blue);">+91 97424 19666</a></p>
+                </div>
+            </div>
+
+            <div class="hours-card">
+                <h3 class="serif">Store Hours</h3>
+                <div class="hours-flex">
+                    <div class="hours-item">
+                        <h4>Monday – Saturday</h4>
+                        <p>10:30 AM – 09:30 PM</p>
+                    </div>
+                    <div class="hours-item">
+                        <h4>Sunday</h4>
+                        <p>10:30 AM – 09:30 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section-padding cta-section" id="contact">
+        <div class="container cta-content">
+            <h2 class="serif">Visit Us Today</h2>
+            <p>Experience 75 years of excellence in winter wear, ethnic fashion, and premium luggage. Our expert staff is ready to help you find exactly what you need.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+919742419666" class="btn btn-primary">Call +91 97424 19666</a>
+                <a href="mailto:info@easternstores.com" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>EASTERN STORES</h3>
+                    <p>South India’s first winter wear store since 1950. Trusted by generations for quality and service.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Information</h4>
+                    <p><strong>Main Store:</strong></p>
+                    <p>102, 103, Commercial Street, Bengaluru<br>Karnataka – 560001, India</p>
+                    <p style="margin-top: 0.5rem;"><strong>Phone:</strong> <a href="tel:+919742419666">+91 97424 19666</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@easternstores.com">info@easternstores.com</a></p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Store Hours</h4>
+                    <p><strong>Monday – Saturday:</strong><br>10:30 AM – 09:30 PM</p>
+                    <p style="margin-top: 0.5rem;"><strong>Sunday:</strong><br>10:30 AM – 09:30 PM</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Eastern Stores. All rights reserved. | South India’s First Winter Wear Store Since 1950
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Script -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
